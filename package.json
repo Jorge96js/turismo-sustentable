@@ -1,0 +1,22 @@
+{
+  "name": "web-turismo",
+  "version": "1.0.0",
+  "description": "Sitio web enfocado al turismo argentino",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "swiper": "^11.1.4"
+  }
+}
