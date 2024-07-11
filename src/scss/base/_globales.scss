@@ -1,0 +1,118 @@
+@use 'variables' as v;
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track{
+  }
+  
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+ 
+  }
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: v.$mainColor!important;
+
+
+    &.body-scroll{
+        padding: 8.6rem 0 0 0;
+    }
+
+    &.dark-theme{
+        background-color: gray;
+        color: v.$white;
+
+        .btn-outline,p{
+            color: v.$white;
+        }
+        h3,h2{
+            color: darken(v.$white, 10%);
+        }
+    }
+}
+section{
+    padding: 4rem 0;
+}
+p {
+    color: v.$white;
+    font-size: 1.8rem;
+
+    font-weight: 300;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.text-left{
+    text-align: left;
+}
+
+
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+
+
+
+input{
+    border: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}

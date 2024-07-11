@@ -1,0 +1,33 @@
+@use 'variables' as v;
+
+
+.button-nav{
+    position: relative;
+    span{
+        font-weight: bold;
+        letter-spacing: 5px;
+        position: relative;
+        left: -3rem;
+        font-size: 1.7rem;
+    }
+    
+    svg{
+        position: absolute;
+        left: -10rem;
+        top: -3.5rem;
+        circle{
+            stroke: v.$gray;
+            transition: all .3s ease-in-out;
+        }
+
+        
+        &:hover{
+            circle{
+                stroke: v.$white;
+
+            }
+        }
+    }
+
+
+}

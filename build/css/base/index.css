@@ -1,0 +1,137 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  background-color: #171727 !important;
+}
+body.body-scroll {
+  padding: 8.6rem 0 0 0;
+}
+body.dark-theme {
+  background-color: gray;
+  color: #fff;
+}
+body.dark-theme .btn-outline, body.dark-theme p {
+  color: #fff;
+}
+body.dark-theme h3, body.dark-theme h2 {
+  color: #e6e6e6;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+p {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+input {
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .swiper-slide img {
+  max-width: 40rem;
+  max-height: 50rem;
+  min-height: 40rem;
+  min-width: 40rem;
+  margin: 0 auto;
+}
+
+.button-nav {
+  position: relative;
+}
+.button-nav span {
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+  left: -3rem;
+  font-size: 1.7rem;
+}
+.button-nav svg {
+  position: absolute;
+  left: -10rem;
+  top: -3.5rem;
+}
+.button-nav svg circle {
+  stroke: #A5B8B2;
+  transition: all 0.3s ease-in-out;
+}
+.button-nav svg:hover circle {
+  stroke: #fff;
+}
