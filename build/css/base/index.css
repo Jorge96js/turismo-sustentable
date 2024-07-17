@@ -2,7 +2,15 @@
   width: 5px;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #F7F7F7;
+}
+
 /* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #A5B8B2;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -16,20 +24,20 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
-  background-color: #171727 !important;
+  background-color: #F7F7F7 !important;
 }
 body.body-scroll {
   padding: 8.6rem 0 0 0;
 }
 body.dark-theme {
   background-color: gray;
-  color: #fff;
+  color: #F7F7F7;
 }
 body.dark-theme .btn-outline, body.dark-theme p {
-  color: #fff;
+  color: #F7F7F7;
 }
 body.dark-theme h3, body.dark-theme h2 {
-  color: #e6e6e6;
+  color: #dedede;
 }
 
 section {
@@ -37,7 +45,7 @@ section {
 }
 
 p {
-  color: #fff;
+  color: #F7F7F7;
   font-size: 1.8rem;
   font-weight: 300;
 }
@@ -133,5 +141,5 @@ form {
   transition: all 0.3s ease-in-out;
 }
 .button-nav svg:hover circle {
-  stroke: #fff;
+  stroke: #F7F7F7;
 }

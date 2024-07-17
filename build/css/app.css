@@ -2,7 +2,15 @@
   width: 5px;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #F7F7F7;
+}
+
 /* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #A5B8B2;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -16,20 +24,20 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
-  background-color: #171727 !important;
+  background-color: #F7F7F7 !important;
 }
 body.body-scroll {
   padding: 8.6rem 0 0 0;
 }
 body.dark-theme {
   background-color: gray;
-  color: #fff;
+  color: #F7F7F7;
 }
 body.dark-theme .btn-outline, body.dark-theme p {
-  color: #fff;
+  color: #F7F7F7;
 }
 body.dark-theme h3, body.dark-theme h2 {
-  color: #e6e6e6;
+  color: #dedede;
 }
 
 section {
@@ -37,7 +45,7 @@ section {
 }
 
 p {
-  color: #fff;
+  color: #F7F7F7;
   font-size: 1.8rem;
   font-weight: 300;
 }
@@ -133,7 +141,7 @@ form {
   transition: all 0.3s ease-in-out;
 }
 .button-nav svg:hover circle {
-  stroke: #fff;
+  stroke: #F7F7F7;
 }
 
 .main-content {
@@ -142,23 +150,8 @@ form {
   flex-direction: column;
   gap: 5rem;
   width: 100%;
-  z-index: 20;
-}
-.main-content .titulos {
-  margin-top: -10rem;
-}
-.main-content .titulos h1, .main-content .titulos h5 {
-  color: #fff;
-  text-align: center;
-}
-.main-content .titulos h1 {
-  font-size: 17rem;
-  /* width: 40%; */
-  line-height: 13rem;
-  font-weight: lighter;
-  font-style: italic;
-  margin: 0px auto;
-  text-align: center;
+  z-index: 99;
+  background: #F7F7F7;
 }
 .main-content p {
   font-size: 2.2rem;
@@ -207,24 +200,25 @@ form {
   font-weight: 200;
 }
 .seccion_visit .circle-video {
-  border-radius: 100%;
   width: 90rem;
   height: 90rem;
+  border-radius: 100% !important;
   overflow: hidden;
   margin: 0 auto;
 }
 .seccion_visit .circle-video video {
   object-fit: cover;
   height: 90rem;
+  border-radius: 100% !important;
 }
 
 .seccion_bottom {
   position: relative;
   background-color: #A5B8B2;
   margin-top: -20rem;
-  max-height: auto;
   height: auto;
   min-height: 40rem;
+  overflow: hidden;
 }
 .seccion_bottom h2 {
   position: absolute;
@@ -232,6 +226,21 @@ form {
   top: 20rem;
   transform: rotate(270deg);
   font-weight: lighter;
+  background-color: #A5B8B2;
+  z-index: 99;
+}
+@media (min-width: 1024px) {
+  .seccion_bottom .swiper {
+    width: 85%;
+  }
+  .seccion_bottom .swiper .swiper-wrapper {
+    text-align: left !important;
+  }
+}
+@media (min-width: 768px) {
+  .seccion_bottom .swiper-wrapper {
+    text-align: center;
+  }
 }
 
 .nav-container {
@@ -256,30 +265,28 @@ form {
   align-items: center;
 }
 
-.heaer-background {
-  position: absolute;
+.header-background {
+  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
   width: 100%;
 }
-.heaer-background video {
+.header-background video {
   position: absolute;
   top: -5rem;
   width: 100%;
-  height: 50rem;
+  height: 65rem;
   object-fit: cover;
   z-index: 1;
 }
-.heaer-background .layout {
+.header-background .layout {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 45rem;
+  height: 60rem;
   background: rgb(52, 52, 52);
-  background: -moz-linear-gradient(180deg, rgba(52, 52, 52, 0) 0%, rgb(23, 23, 39) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(52, 52, 52, 0) 0%, rgb(23, 23, 39) 100%);
   background: linear-gradient(180deg, rgba(52, 52, 52, 0) 0%, rgb(23, 23, 39) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#343434",endColorstr="#171727",GradientType=1);
   z-index: 6;
@@ -287,11 +294,35 @@ form {
 
 .header {
   position: relative;
-  height: 40rem;
+  height: auto;
+}
+.header .titulos {
+  padding-top: 8rem;
+}
+.header .titulos h1, .header .titulos h5 {
+  color: #6ECB63;
+  text-align: center;
+}
+.header .titulos h1 {
+  font-size: 7rem;
+  line-height: 5rem;
+  font-weight: bolder;
+  font-style: italic;
+  margin: 0px auto;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .header .titulos h1 {
+    font-size: 13rem;
+    line-height: 10rem;
+    width: 100%;
+  }
 }
 .header .header-content {
   position: relative;
-  bottom: -20rem;
+  bottom: 0rem;
+  left: 0;
   z-index: 6;
   width: 100%;
   text-align: center;
