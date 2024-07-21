@@ -27,7 +27,7 @@ body {
   background-color: #F7F7F7 !important;
 }
 body.body-scroll {
-  padding: 8.6rem 0 0 0;
+  overflow: hidden;
 }
 body.dark-theme {
   background-color: gray;
@@ -345,10 +345,12 @@ form {
 }
 
 .show {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
+  box-shadow: 3px 3px 10px #000;
   margin: 0 !important;
   height: 100vh;
   background-color: #F7F7F7;

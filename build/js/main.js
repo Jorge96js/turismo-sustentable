@@ -60,5 +60,6 @@ function burguerMenu(){
 
     mcBtn.addEventListener('click',()=>{
         nav.classList.toggle('show');
+        document.body.classList.toggle('body-scroll')
     })
 }
