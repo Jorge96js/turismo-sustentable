@@ -1,9 +1,19 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 
-.button-nav{
-    position: relative;
-    span{
+.button-nav {
+    color: v.$white;
+    &:hover {
+            color: v.$mainColor!important;
+            svg{
+                circle {
+                    stroke: v.$mainColor;
+                }
+            }
+    }
+
+    span {
         font-weight: bold;
         letter-spacing: 5px;
         position: relative;
@@ -11,23 +21,62 @@
         font-size: 1.7rem;
     }
     
-    svg{
+    svg {
         position: absolute;
-        left: -10rem;
+        left: -7rem;
         top: -3.5rem;
-        circle{
+        width: 7.5rem;
+        
+        circle {
+            position: relative;
+            z-index: 99;
             stroke: v.$gray;
             transition: all .3s ease-in-out;
         }
-
         
-        &:hover{
-            circle{
-                stroke: v.$white;
 
-            }
-        }
     }
 
+}
+.button_2{
+    svg{
+        left: 9rem!important;
 
+    }
+}
+
+
+.burguer-button{
+    @include m.tablet{
+        display: none;
+    }
+    display: block;
+    position: absolute;
+    z-index: 99;
+    right: 15%;
+    top: 5%;
+    height: 2.5rem;
+
+    b{
+        width: 40px;
+        height: 3px;
+        background-color: v.$mainColor;
+        border-radius: 3px;
+
+        &:nth-child(1){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2){
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        &:nth-child(3){
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    }
 }

@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-    swiper()
-    parallax()
+    swiper();
+    desplegarNav();
+    burguerMenu();
 });
 
 
@@ -37,4 +38,27 @@ const parallax = () => {
 
         lastScrollTop = scrollTop;
     });
+}
+
+function desplegarNav() {
+    const nav = document.querySelector('.nav-container');
+    const main = document.getElementById('contenedorMain');
+    
+    window.addEventListener('scroll',()=>{
+        if(main.getBoundingClientRect().top < 0){
+            nav.classList.add('fixed');
+        }else{
+            nav.classList.remove('fixed')
+        }
+    })
+}
+
+
+function burguerMenu(){
+    const mcBtn =  document.querySelector('.burguer-button');
+    const nav = document.querySelector('.nav-container');
+
+    mcBtn.addEventListener('click',()=>{
+        nav.classList.toggle('show');
+    })
 }

@@ -122,7 +122,13 @@ form {
 }
 
 .button-nav {
-  position: relative;
+  color: #F7F7F7;
+}
+.button-nav:hover {
+  color: #6ECB63 !important;
+}
+.button-nav:hover svg circle {
+  stroke: #6ECB63;
 }
 .button-nav span {
   font-weight: bold;
@@ -133,15 +139,54 @@ form {
 }
 .button-nav svg {
   position: absolute;
-  left: -10rem;
+  left: -7rem;
   top: -3.5rem;
+  width: 7.5rem;
 }
 .button-nav svg circle {
+  position: relative;
+  z-index: 99;
   stroke: #A5B8B2;
   transition: all 0.3s ease-in-out;
 }
-.button-nav svg:hover circle {
-  stroke: #F7F7F7;
+
+.button_2 svg {
+  left: 9rem !important;
+}
+
+.burguer-button {
+  display: block;
+  position: absolute;
+  z-index: 99;
+  right: 15%;
+  top: 5%;
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .burguer-button {
+    display: none;
+  }
+}
+.burguer-button b {
+  width: 40px;
+  height: 3px;
+  background-color: #6ECB63;
+  border-radius: 3px;
+}
+.burguer-button b:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.burguer-button b:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.burguer-button b:nth-child(3) {
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .main-content {
@@ -151,6 +196,7 @@ form {
   gap: 5rem;
   width: 100%;
   z-index: 99;
+  margin-top: 45rem;
   background: #F7F7F7;
 }
 .main-content p {
@@ -214,7 +260,7 @@ form {
 
 .seccion_bottom {
   position: relative;
-  background-color: #A5B8B2;
+  background-color: #6ECB63;
   margin-top: -20rem;
   height: auto;
   min-height: 40rem;
@@ -226,7 +272,7 @@ form {
   top: 20rem;
   transform: rotate(270deg);
   font-weight: lighter;
-  background-color: #A5B8B2;
+  background-color: #6ECB63;
   z-index: 99;
 }
 @media (min-width: 1024px) {
@@ -245,13 +291,21 @@ form {
 
 .nav-container {
   position: relative;
-  z-index: 9;
-  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
   padding: 0.3rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .nav-container {
+    display: flex;
+  }
 }
 .nav-container .lang {
   display: flex;
@@ -259,10 +313,57 @@ form {
   font-size: 0.1rem;
   cursor: pointer;
 }
+.nav-container.fixed {
+  position: fixed;
+  background-color: #F7F7F7;
+  margin: 0 !important;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2196078431);
+  height: 8rem;
+}
+.nav-container.fixed .lang p {
+  color: #333333 !important;
+}
+.nav-container.fixed h3 {
+  color: #333333 !important;
+}
+.nav-container.fixed .nav-right a {
+  color: #333333 !important;
+  border: 1px solid #333333 !important;
+}
+.nav-container.fixed .button-nav {
+  color: #333333 !important;
+  transition: all 0.3s ease-in-out;
+}
+.nav-container.fixed .button-nav:hover {
+  color: #6ECB63 !important;
+}
 .nav-container .nav-buttons {
+  position: relative;
   display: flex;
   gap: 10rem;
   align-items: center;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 0 !important;
+  height: 100vh;
+  background-color: #F7F7F7;
+  width: 20rem;
+}
+.show .nav-buttons, .show .left-content, .show .nav-right {
+  display: flex;
+  flex-direction: column;
+}
+.show .nav-buttons .button_2 svg, .show .left-content .button_2 svg, .show .nav-right .button_2 svg {
+  top: 9.4rem;
+  left: -7rem !important;
+}
+.show a, .show p, .show span, .show h3 {
+  color: #000 !important;
 }
 
 .header-background {
@@ -298,9 +399,12 @@ form {
 }
 .header .titulos {
   padding-top: 8rem;
+  position: fixed;
+  top: 5rem;
+  left: 0;
 }
 .header .titulos h1, .header .titulos h5 {
-  color: #6ECB63;
+  color: #F7F7F7;
   text-align: center;
 }
 .header .titulos h1 {

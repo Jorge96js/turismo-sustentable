@@ -36,8 +36,11 @@
 
     .titulos{
         padding-top: 8rem;
+        position: fixed;
+        top: 5rem;
+        left: 0;
         h1,h5{
-            color: v.$mainColor;
+            color: v.$white;
             text-align: center;
         }
         

@@ -1,26 +1,86 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 
 
 .nav-container{
+    @include m.tablet{
+        display: flex;
+    }
     position: relative;
-    z-index: 9;
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
     padding: .3rem .5rem;
-
     .lang{
         display: flex;
         gap: 1rem;
         font-size: .10rem;
         cursor: pointer;
     }
+    &.fixed{
+        position: fixed;
+        background-color: v.$white;
+        margin: 0!important;
+        box-shadow: 3px 3px 5px #00000038;
+        height: 8rem;
+        .lang{
+            p{
+                color: lighten(v.$black, 20)!important;
+            }
+        }
+        h3{
+            color: lighten(v.$black, 20)!important;
+        }
+        .nav-right{
+            a{
+                color: lighten(v.$black, 20)!important;
+                border: 1px solid lighten(v.$black, 20)!important;
+            }
+        }
+        .button-nav{
+            color: lighten(v.$black, 20)!important;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color: v.$mainColor!important;
+            }
+        }
+    }
 
     .nav-buttons{
+        position: relative;
         display: flex;
         gap: 10rem;
         align-items: center;
+    }
+}
+
+
+
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    .nav-buttons,.left-content,.nav-right{
+        display: flex;
+        flex-direction: column;
+        .button_2 svg {
+            top: 9.4rem;
+            left: -7rem !important;
+        }
+    }
+    margin: 0!important;
+    height: 100vh;
+    background-color: v.$white;
+    width: 20rem;
+    a,p,span,h3{
+        color: v.$black!important;
     }
 }
