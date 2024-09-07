@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     swiper();
     desplegarNav();
     burguerMenu();
+    hiddenLayout()
 });
 
 
@@ -63,3 +64,47 @@ function burguerMenu(){
         document.body.classList.toggle('body-scroll')
     })
 }
+
+function hiddenLayout(){
+    let container = document.querySelector('.circle-video');
+    let layout = document.querySelector('.seccion_visit .layout');
+    let info = document.querySelector('.seccion_visit-info')
+
+    let container2 = document.querySelector('.destino2 .circle-video');
+    let layout2 = document.querySelector('.destino2 .layout');
+    let info2 = document.querySelector('.destino2 .seccion_visit-info')
+
+    let container3 = document.querySelector('.destino3 .circle-video');
+    let layout3 = document.querySelector('.destino3 .layout');
+    let info3 = document.querySelector('.destino3 .seccion_visit-info')
+
+
+        container.addEventListener('mouseenter',()=>{
+            layout.style.display = "none";
+            info.style.display = "none";
+        })
+        
+        container.addEventListener('mouseleave',()=>{
+            layout.style.display = "block";
+            info.style.display = "flex";
+        })
+
+        container2.addEventListener('mouseenter',()=>{
+            layout2.style.display = "none";
+            info2.style.display = "none";
+
+        })
+        
+        container2.addEventListener('mouseleave',()=>{
+            layout2.style.display = "block";
+            info2.style.display = "flex";
+
+        })
+
+        container3.addEventListener('mouseenter',()=>{
+            layout3.style.display = "none";
+            info3.style.display = "none";
+        })
+        
+
+    }
