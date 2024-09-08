@@ -66,45 +66,32 @@ function burguerMenu(){
 }
 
 function hiddenLayout(){
-    let container = document.querySelector('.circle-video');
-    let layout = document.querySelector('.seccion_visit .layout');
-    let info = document.querySelector('.seccion_visit-info')
+    let container = document.querySelectorAll('.circle-video');
+    let layout = document.querySelectorAll('.seccion_visit .layout');
+    let info = document.querySelectorAll('.seccion_visit-info');
 
-    let container2 = document.querySelector('.destino2 .circle-video');
-    let layout2 = document.querySelector('.destino2 .layout');
-    let info2 = document.querySelector('.destino2 .seccion_visit-info')
+    let div = document.createElement('DIV');
+    let a = document.createElement('A');
+    div.classList.add('dynamic-btn');
+    a.textContent = 'Reservar Ahora!';
+    a.classList.add('book-button', 'book-now')
+    div.appendChild(a)
 
-    let container3 = document.querySelector('.destino3 .circle-video');
-    let layout3 = document.querySelector('.destino3 .layout');
-    let info3 = document.querySelector('.destino3 .seccion_visit-info')
+    for(let i = 0; i<= 2; i++){
+        container[i].addEventListener('mouseenter',()=>{
+            layout[i].style.display = "none";
+            info[i].style.display = "none";
 
-
-        container.addEventListener('mouseenter',()=>{
-            layout.style.display = "none";
-            info.style.display = "none";
-        })
-        
-        container.addEventListener('mouseleave',()=>{
-            layout.style.display = "block";
-            info.style.display = "flex";
+            a.href = `pages/booknow.html?id=${i}`
+            container[i].appendChild(div)
         })
 
-        container2.addEventListener('mouseenter',()=>{
-            layout2.style.display = "none";
-            info2.style.display = "none";
-
+        container[i].addEventListener('mouseleave',()=>{
+            layout[i].style.display = "block";
+            info[i].style.display = "flex";
+            container[i].removeChild(div)
         })
-        
-        container2.addEventListener('mouseleave',()=>{
-            layout2.style.display = "block";
-            info2.style.display = "flex";
-
-        })
-
-        container3.addEventListener('mouseenter',()=>{
-            layout3.style.display = "none";
-            info3.style.display = "none";
-        })
-        
-
     }
+
+    i = (i > 2) ? 0 : i;
+}

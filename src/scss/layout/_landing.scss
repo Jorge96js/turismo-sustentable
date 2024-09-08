@@ -41,8 +41,7 @@
     margin-top: 0;
     overflow: hidden;
     background: #333340;
-    padding: 0;
-
+    padding: 3rem 0;
     .layout {
         @include m.layout-style;
     }
@@ -106,14 +105,21 @@
 }
 
 .seccion_visit-info{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    width: 60%;
-    right: 5rem;
-    top: 30%;
+    width: 90%;
+
+    @include m.tablet{
+        position: absolute;
+        width: 60%;
+        right: 5rem;
+        width: 60%;
+        right: 5rem;
+        top: 30%;
+    }
     h3{
         font-weight: bold;
         color: v.$white;

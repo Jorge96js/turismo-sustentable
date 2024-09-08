@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+
+    <title>Turismo sustentable</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../build/css/app.css">
+</head>
+<body>    
+
+    <a class="burguer-button">
+        <b></b>
+        <b></b>
+        <b></b>
+    </a>
+    
+    <div class="nav-container px-5 mt-3">
+
+
+        <div class="left-content d-flex gap-3">
+            <a href="/">
+                <img src="../src/images/hoja.png" alt="Logo de la pagina">
+                <h3 class="text-left text-white fs-2">Turismo<br>sustentable</h3>
+            </a>
+
+            <div class="lang mx-5">
+                <p><img src="../src/images/flags/Spain 2.svg" alt="Spanish lenguage flag"></p>
+                <p><img src="../src/images/flags/USA.svg" alt="English lenguage flag"></p>
+            </div>
+        </div>
+
+
+        <div class="nav-buttons">
+            <a href="destinations.html" class="btn btn-outline-light px-4 rounded-1 fs-2 mx-5">Destinos sustentables</a>
+        </div>
+        
+    </div>
+
+    <div class="header-background">
+
+    <!--- Video de fondo del header --->
+        <video src="../src/videos/5408399-hd_1920_1080_30fps.mp4" autoplay muted loop></video>
+        <div class="layout">
+        </div>
+    
+    </div>
+    
+    <header class="container-fluid header">
+        <div class="container header-content">
+            <div class="titulos">
+                <!-- Titulo principal del header --->
+                <h5 class="fs-1 mb-5">TURISMO SUSTENTABLE A WALK ON THE WILD SIDE</h5>
+                <h1>UNTAMED PATAGONIA</h1>
+                <a class="book-button" href="/booknow.html">Reservar Ahora!</a>
+            </div>
+        </div>
+    </header>
+    
+    <main id="contenedorMain" class="container-fluid main-content">
+
+        <h1 id="formPage-title" class="text-center fw-bold my-5">Reserva un hospedaje a tu destino</h1>
+        <div class="col-10 mt-5 mx-auto">
+            <form class="form" action="/" method="post">
+                <h2 class="text-left mt-5 form-title">Datos del cliente</h2>
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Su nombre:</label>
+                        <input type="text" id="name" placeholder="Escriba su nombre">
+                    </div>
+    
+                    <div class="field">
+                        <label for="lastname">Su apellido:</label>
+                        <input type="text" id="lastname" placeholder="Escriba su apellido">
+                    </div>
+    
+                    <div class="field">
+                        <label for="email">Su correo electronico:</label>
+                        <input type="email" id="email" placeholder="Escriba su correo electronico">
+                    </div>
+    
+                    <div class="field">
+                        <label for="phone">Telefono:</label>
+                        <input type="number" id="phone" placeholder="Escriba su numero de celular">
+                    </div>
+    
+                    <div class="field">
+                        <label for="date">Fecha:</label>
+                        <input type="date" id="date">
+                    </div>
+    
+                    <div class="field">
+                        <label for="destination">Destino:</label>
+                        <select id="destination">
+                            <option class="text-center" selected disabled> --- Selecciones su destino sustentable --- </option>
+                            <option value="misiones">Quiero viajar a Misiones</option>
+                            <option value="mendoza">Quiero viajar a Mendoza</option>
+                            <option value="santa-cruz">Quiero viajar a Santa Cruz</option>
+                        </select>
+                    </div>
+    
+                    <div class="field">
+                        <label for="info">Descripcion adicional:</label>
+                        <textarea id="info" cols="10" rows="5"></textarea>
+                    </div>
+    
+                    <div class="field">
+                        <label for="numberOfTravelers">Cuantos van a viajar?</label>
+                        <input type="number" id="numberOfTravelers" name="numberOfTravelers" min="1" required>                    
+                    </div>
+                </div>
+
+                <button type="submit" class="book-button">Enviar</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="/build/js/pages-scripts.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../build/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

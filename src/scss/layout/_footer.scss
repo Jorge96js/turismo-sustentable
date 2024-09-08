@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    background-color: darken(v.$white, 8%);
+    @include m.tablet{
+
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    img{
+        width: 30rem;
+    }
+
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            font-weight:500;
+        }
+    }
+
+    p{
+        background-color: lighten(v.$black, 83%);
+        color: v.$black;
+        width: 100%;
+        padding: 1rem 0;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+}

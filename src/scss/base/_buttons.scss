@@ -80,3 +80,46 @@
         }
     }
 }
+
+
+.book-button{
+    position: absolute;
+    background-color: v.$mainColor;
+    color: v.$white;
+    font-weight: bold;
+    text-align: center;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    bottom: -10rem;
+    left: 35%;
+    @include m.tablet{
+        left: 45%; //escritorio
+    }
+    @include m.telefono{
+        left: 45%; //escritorio
+    }
+    &:hover{
+        background-color: darken(v.$mainColor, 10%);
+    }
+}
+
+.dynamic-btn{
+    position: absolute;
+    z-index: 9999;
+    bottom: 20%;
+    left: 25%;
+    width: 40%;
+    margin: 0 auto;
+    height: 5rem;
+    .book-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+

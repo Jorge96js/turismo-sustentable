@@ -59,26 +59,7 @@
             transition: all .3s ease-in-out;
         }
 
-        .book-button{
-            position: absolute;
-            background-color: v.$mainColor;
-            color: v.$white;
-            font-weight: bold;
-            text-align: center;
-            padding: .5rem 1rem;
-            border-radius: 5rem;
-            bottom: -10rem;
-            left: 35%;
-            @include m.tablet{
-                left: 45%; //escritorio
-            }
-            @include m.telefono{
-                left: 45%; //escritorio
-            }
-            &:hover{
-                background-color: darken(v.$mainColor, 10%);
-            }
-        }
+       
     }
 
     .header-content{
