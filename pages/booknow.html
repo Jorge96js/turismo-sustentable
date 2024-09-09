@@ -27,7 +27,7 @@
 
 
         <div class="left-content d-flex gap-3">
-            <a href="/">
+            <a href="../">
                 <img src="../src/images/hoja.png" alt="Logo de la pagina">
                 <h3 class="text-left text-white fs-2">Turismo<br>sustentable</h3>
             </a>
@@ -72,11 +72,7 @@
             <form class="form" action="/" method="post">
                 <h2 class="text-left mt-5 form-title">Agregue sus datos</h2>
                 <div class="fields">
-                    <div class="field">
-                        <label for="name">Su nombre y apellido:</label>
-                        <input type="text" id="name" placeholder="Escriba su nombre">
-                    </div>
-    
+
                     <div class="field">
                         <label for="destination">Destino:</label>
                         <select id="destination">
@@ -85,6 +81,16 @@
                             <option value="mendoza">Quiero viajar a Mendoza</option>
                             <option value="santa-cruz">Quiero viajar a Santa Cruz</option>
                         </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="date">Fecha:</label>
+                        <input type="date" id="date">
+                    </div>
+
+                    <div class="field">
+                        <label for="name">Su nombre y apellido:</label>
+                        <input type="text" id="name" placeholder="Escriba su nombre">
                     </div>
     
                     <div class="field">
@@ -96,22 +102,17 @@
                         <label for="phone">Telefono:</label>
                         <input type="number" id="phone" placeholder="Escriba su numero de celular">
                     </div>
-    
-                    <div class="field">
-                        <label for="date">Fecha:</label>
-                        <input type="date" id="date">
-                    </div>
-    
-                    <div class="field">
-                        <label for="info">Descripcion adicional:</label>
-                        <textarea id="info" cols="10" rows="5"></textarea>
-                    </div>
-    
+                    
                     <div class="field">
                         <label for="numberOfTravelers">Cuantos van a viajar?</label>
                         <input type="number" id="numberOfTravelers" name="numberOfTravelers" min="1" required>                    
                     </div>
+                    <div class="field">
+                        <label for="info">Descripcion adicional:</label>
+                        <textarea id="info" cols="10" rows="5"></textarea>
+                    </div>
                 </div>
+
 
                 <button type="submit" class="book-button">Enviar</button>
             </form>

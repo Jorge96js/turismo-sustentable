@@ -278,14 +278,18 @@ form {
   margin-top: 3rem;
 }
 .field input {
-  border: 1px solid #999999;
   border-radius: 0.3rem;
-  min-width: 60%;
-  max-width: 90%;
 }
-.field select, .field textarea {
+.field select, .field textarea, .field input {
   min-width: 60%;
   max-width: 90%;
+  outline-color: #4cbc3f;
+  border: 1px solid #999999;
+}
+.field #destination {
+  border-radius: 0.3rem;
+  border: 1px solid #999999;
+  padding: 0.5rem 0;
 }
 
 .main-content {
@@ -300,6 +304,9 @@ form {
 }
 .main-content p {
   font-size: 2.2rem;
+}
+.main-content.page {
+  margin: 0;
 }
 
 .seccion-info h2 {
@@ -576,6 +583,15 @@ form {
   gap: 0;
   align-items: center;
 }
+.nav-container.nav-pages {
+  margin: 0;
+  background-color: #F7F7F7;
+  box-shadow: 1px 1px 3px #000;
+  height: 7rem;
+}
+.nav-container.nav-pages h3 {
+  text-shadow: #000 2px 2px 3px;
+}
 
 .show {
   position: absolute;
@@ -703,4 +719,64 @@ form {
   text-align: center;
   margin: 0;
   font-size: 1.5rem;
+}
+
+.page {
+  padding: 0;
+  overflow: hidden;
+}
+
+.destinations {
+  height: 100vh;
+  width: 100%;
+}
+.destinations .swiper-slide {
+  position: relative;
+}
+.destinations .swiper-slide .contenido-slide {
+  position: absolute;
+  top: 10rem;
+  left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.destinations .swiper-slide .contenido-slide h3 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+.destinations .swiper-slide .contenido-slide h3, .destinations .swiper-slide .contenido-slide p {
+  text-align: left;
+  width: 60%;
+}
+.destinations .swiper-slide img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+.destinations .swiper-slide .book-button {
+  border-radius: 0.3rem;
+  left: 1rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  width: 15rem;
+}
+.destinations .swiper-pagination span {
+  background-color: #6ECB63;
+  border-radius: 0;
+  width: 15rem;
+  height: 7rem;
+  background-image: url("https://swiperjs.com/demos/images/nature-8.jpg") !important;
+  background-size: cover;
+  background-position: center;
+}
+.destinations .swiper-pagination span:nth-of-type(1) {
+  background-image: url("https://swiperjs.com/demos/images/nature-7.jpg") !important;
+}
+.destinations .swiper-pagination span:nth-of-type(2) {
+  background-image: url("https://swiperjs.com/demos/images/nature-6.jpg") !important;
 }

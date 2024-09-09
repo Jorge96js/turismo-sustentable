@@ -278,12 +278,16 @@ form {
   margin-top: 3rem;
 }
 .field input {
-  border: 1px solid #999999;
   border-radius: 0.3rem;
-  min-width: 60%;
-  max-width: 90%;
 }
-.field select, .field textarea {
+.field select, .field textarea, .field input {
   min-width: 60%;
   max-width: 90%;
+  outline-color: #4cbc3f;
+  border: 1px solid #999999;
+}
+.field #destination {
+  border-radius: 0.3rem;
+  border: 1px solid #999999;
+  padding: 0.5rem 0;
 }

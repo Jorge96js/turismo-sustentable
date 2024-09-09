@@ -40,15 +40,22 @@
     font-weight: bold;
     margin-top: 3rem;
     input{
-        border: 1px solid lighten(v.$black, 60%);
         border-radius: .3rem;
-        min-width: 60%;
-        max-width: 90%;
     }
     
-    select, textarea{
+    select, textarea, input{
         min-width: 60%;
         max-width: 90%;
+        outline-color: darken(v.$mainColor, 10%);
+        border: 1px solid lighten(v.$black, 60%);
+
     }
+
+    #destination{
+        border-radius: .3rem;
+        border: 1px solid lighten(v.$black, 60%);
+        padding: .5rem 0;
+    }
+
 
 }

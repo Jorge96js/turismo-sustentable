@@ -23,11 +23,11 @@
         <b></b>
     </a>
     
-    <div class="nav-container px-5 mt-3">
+    <div class="nav-container px-5 nav-pages">
 
 
         <div class="left-content d-flex gap-3">
-            <a href="/">
+            <a href="../">
                 <img src="../src/images/hoja.png" alt="Logo de la pagina">
                 <h3 class="text-left text-white fs-2">Turismo<br>sustentable</h3>
             </a>
@@ -39,38 +39,58 @@
         </div>
 
         <div class="nav-buttons">
-            <a href="destinations.html" class="btn btn-outline-light px-4 rounded-1 fs-2 mx-5">Destinos sustentables</a>
+            <a href="destinations.html" class="btn btn-outline-dark px-4 rounded-1 fs-2 mx-5">Destinos sustentables</a>
         </div>
         
     </div>
+    
+    <main id="contenedorMain" class="container-fluid main-content page">
 
-    <div class="header-background">
+        <div class="pages-swiper destinations">
+            <div class="swiper-wrapper">
 
-    <!--- Video de fondo del header --->
-        <video src="../src/videos/5408399-hd_1920_1080_30fps.mp4" autoplay muted loop></video>
-        <div class="layout">
+                <article class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="">
+
+                    <div class="contenido-slide">
+                        <h3>Mendoza</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consequatur tenetur aperiam. Quae, quis sit.</p>
+                        
+                        <a href="" class="book-button">Book now!</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="">
+
+                    <div class="contenido-slide">
+                        <h3>Misiones</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consequatur tenetur aperiam. Quae, quis sit.</p>
+                        
+                        <a href="" class="book-button">Book now!</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="">
+
+                    <div class="contenido-slide">
+                        <h3>Santa Cruz</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consequatur tenetur aperiam. Quae, quis sit.</p>
+                        
+                        <a href="" class="book-button">Book now!</a>
+                    </div>
+                </article>
+                
+            </div>      
+            <div class="swiper-pagination"></div>
         </div>
-    
-    </div>
-    
-    <header class="container-fluid header">
-        <div class="container header-content">
-            <div class="titulos">
-                <!-- Titulo principal del header --->
-                <h5 class="fs-1 mb-5">TURISMO SUSTENTABLE A WALK ON THE WILD SIDE</h5>
-                <h1>UNTAMED PATAGONIA</h1>
-                <a class="book-button" href="booknow.html">Reservar Ahora!</a>
-            </div>
-        </div>
-    </header>
-    
-    <main id="contenedorMain" class="container-fluid main-content">
+
 
 
     </main>
 
-    <script src="/build/js/pages-scripts.js">
-    </script>
+    <script src="/build/js/pages-scripts.js"> </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
