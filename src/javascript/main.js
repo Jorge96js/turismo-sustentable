@@ -13,8 +13,9 @@ function swiper(){
 
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
+        effect: "fade",
         loop: true,
-        autoplay: true
+        autoplay: true,
     });
 }
 

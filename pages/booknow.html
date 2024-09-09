@@ -70,16 +70,21 @@
         <h1 id="formPage-title" class="text-center fw-bold my-5">Reserva un hospedaje a tu destino</h1>
         <div class="col-10 mt-5 mx-auto">
             <form class="form" action="/" method="post">
-                <h2 class="text-left mt-5 form-title">Datos del cliente</h2>
+                <h2 class="text-left mt-5 form-title">Agregue sus datos</h2>
                 <div class="fields">
                     <div class="field">
-                        <label for="name">Su nombre:</label>
+                        <label for="name">Su nombre y apellido:</label>
                         <input type="text" id="name" placeholder="Escriba su nombre">
                     </div>
     
                     <div class="field">
-                        <label for="lastname">Su apellido:</label>
-                        <input type="text" id="lastname" placeholder="Escriba su apellido">
+                        <label for="destination">Destino:</label>
+                        <select id="destination">
+                            <option class="text-center" selected disabled> --- Selecciones su destino sustentable --- </option>
+                            <option value="misiones">Quiero viajar a Misiones</option>
+                            <option value="mendoza">Quiero viajar a Mendoza</option>
+                            <option value="santa-cruz">Quiero viajar a Santa Cruz</option>
+                        </select>
                     </div>
     
                     <div class="field">
@@ -95,16 +100,6 @@
                     <div class="field">
                         <label for="date">Fecha:</label>
                         <input type="date" id="date">
-                    </div>
-    
-                    <div class="field">
-                        <label for="destination">Destino:</label>
-                        <select id="destination">
-                            <option class="text-center" selected disabled> --- Selecciones su destino sustentable --- </option>
-                            <option value="misiones">Quiero viajar a Misiones</option>
-                            <option value="mendoza">Quiero viajar a Mendoza</option>
-                            <option value="santa-cruz">Quiero viajar a Santa Cruz</option>
-                        </select>
                     </div>
     
                     <div class="field">

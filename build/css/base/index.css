@@ -113,6 +113,10 @@ form {
   flex-direction: column;
 }
 
+.swiper-slide {
+  height: 50rem;
+}
+
 .row .swiper-slide img {
   max-width: 40rem;
   max-height: 50rem;
